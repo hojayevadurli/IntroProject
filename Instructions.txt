@@ -1,0 +1,46 @@
+﻿Trees (in this program) grow on an exact gid {how convienent!}.  The attached TreeMap.txt file has an '.' code to mark where there is NO TREE and a '#' symbol to indicate where the IS A TREE.  This pattern repeats itself horizontally as many times as needed (perhaps there is some predictability in nature's random).
+For example, consider the first 3 rows of the map:
+....##..#........##...#.#..#.##
+.#.#..#....##....#...#..##.....
+##.#..##..#...#..........##.#..
+They would expand as follows: (if you needed 3x width)
+....##..#........##...#.#..#.##....##..#........##...#.#..#.##....##..#........##...#.#..#.##
+.#.#..#....##....#...#..##......#.#..#....##....#...#..##......#.#..#....##....#...#..##.....
+##.#..##..#...#..........##.#..##.#..##..#...#..........##.#..##.#..##..#...#..........##.#..
+
+Your job is to 'ski' down the mountain.  Start in the '.' square on the first row (first left column of first row).
+
+As you ski down the mountain, you are likely to hit a few trees.  Keep track of the number of trees you would hit before reaching the bottom and finishing your ski run. (ANSWER to the program is # of trees you 'hit'.)
+
+You will need to take in a 'slope' and always ski according to that slope.  Travel through all 323 lines from your TreeMap sticking with that constant slope.
+
+For Example if your map was:
+..##.........##.........##.........##.........##.........##.......  --->
+#...#...#..#...#...#..#...#...#..#...#...#..#...#...#..#...#...#..
+.#....#..#..#....#..#..#....#..#..#....#..#..#....#..#..#....#..#.
+..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#
+.#...##..#..#...##..#..#...##..#..#...##..#..#...##..#..#...##..#.
+..#.##.......#.##.......#.##.......#.##.......#.##.......#.##.....  --->
+.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#
+.#........#.#........#.#........#.#........#.#........#.#........#
+#.##...#...#.##...#...#.##...#...#.##...#...#.##...#...#.##...#...
+#...##....##...##....##...##....##...##....##...##....##...##....#
+.#..#...#.#.#..#...#.#.#..#...#.#.#..#...#.#.#..#...#.#.#..#...#.#  --->
+
+...and your slope was 3:1 (3 over, 1 down) here is a possible 
+..##.........##.........##.........##.........##.........##.......  --->
+#..O#...#..#...#...#..#...#...#..#...#...#..#...#...#..#...#...#..
+.#....X..#..#....#..#..#....#..#..#....#..#..#....#..#..#....#..#.
+..#.#...#O#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#
+.#...##..#..X...##..#..#...##..#..#...##..#..#...##..#..#...##..#.
+..#.##.......#.X#.......#.##.......#.##.......#.##.......#.##.....  --->
+.#.#.#....#.#.#.#.O..#.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#
+.#........#.#........X.#........#.#........#.#........#.#........#
+#.##...#...#.##...#...#.X#...#...#.##...#...#.##...#...#.##...#...
+#...##....##...##....##...#X....##...##....##...##....##...##....#
+.#..#...#.#.#..#...#.#.#..#...X.#.#..#...#.#.#..#...#.#.#..#...#.#  --->
+
+...This map and slope would lead to 7 tree hits on your path. (see the 'X' on the output?)
+
+So, starting at the top-left corner of your map, and following a slope of 3 over and 1 down, how many trees would you hit?
+

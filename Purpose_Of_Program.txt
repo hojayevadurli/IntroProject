@@ -1,0 +1,6 @@
+﻿Covers:
+ETL - Architecture pattern (focusing on extracting the map, transforming it (but not loading))
+Class Design - 
+
+The purpose of this exercise is to:
+1) practice 'loading' 
